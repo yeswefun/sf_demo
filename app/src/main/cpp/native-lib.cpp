@@ -94,8 +94,8 @@ Java_com_z_sf00_player_ZPlayerView_nPlay
     uint8_t *frameBuffer = (uint8_t *)malloc(frameSize);
     // 为pFrameRGB挂上buffer, 这个buffer是用于存缓冲数据
     AVFrame *pFrameRGBA = av_frame_alloc();
-    av_image_fill_arrays(pFrameRGBA->data, pFrameRGBA->linesize,
-                         frameBuffer,
+    av_image_fill_arrays(pFrameRGBA->data, pFrameRGBA->linesize,    // dst, TODO: 这个函数到底做了什么?
+                         frameBuffer,                               // src
                          AV_PIX_FMT_RGBA, pCodecCtx->width, pCodecCtx->height, 1);
 
     int frameIndex = 0;

@@ -30,6 +30,8 @@ adb logcat | ndk-stack -sym app/build/intermediates/cmake/debug/obj/arm64-v8a
         ZMedia
 
     21. 音视频同步的原理
+
+播放视频的流程跟播放音频的流程类似
 */
 public class MainActivity extends AppCompatActivity {
 
